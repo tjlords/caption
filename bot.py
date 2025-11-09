@@ -4,10 +4,10 @@ from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 
 # ======== ENV CONFIG ========
-API_ID = int(os.getenv("API_ID") or 11843091)
-API_HASH = os.getenv("API_HASH") or "be955ff462011615097f96745b3627f3"
-BOT_TOKEN = os.getenv("BOT_TOKEN") or "8127293382:AAHnBJGwOwlgD2Fe8R-6iimUOyhuoMxw6wU"
-OWNER_ID = int(os.getenv("OWNER_ID") or 5891678566)  # your own Telegram ID
+API_ID = int(os.getenv("API_ID") or 123456789)
+API_HASH = os.getenv("API_HASH") or ""
+BOT_TOKEN = os.getenv("BOT_TOKEN") or ""
+OWNER_ID = int(os.getenv("OWNER_ID") or 123456789)  # your own Telegram ID
 BASE_URL = f"https://api.telegram.org/bot{BOT_TOKEN}"
 
 # ======== INIT ========
