@@ -4,10 +4,10 @@ from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 
 # ======== ENV CONFIG ========
-API_ID = int(os.getenv("API_ID") or 123456789)
-API_HASH = os.getenv("API_HASH") or ""
-BOT_TOKEN = os.getenv("BOT_TOKEN") or ""
-OWNER_ID = int(os.getenv("OWNER_ID") or 123456789)  # your own Telegram ID
+API_ID = int(os.getenv("API_ID") or 11843091)
+API_HASH = os.getenv("API_HASH") or "be955ff462011615097f96745b3627f3"
+BOT_TOKEN = os.getenv("BOT_TOKEN") or "8127293382:AAHnBJGwOwlgD2Fe8R-6iimUOyhuoMxw6wU"
+OWNER_ID = int(os.getenv("OWNER_ID") or 5891678566)  # your own Telegram ID
 BASE_URL = f"https://api.telegram.org/bot{BOT_TOKEN}"
 
 # ======== INIT ========
@@ -257,4 +257,12 @@ async def main():
     await asyncio.gather(bot.start(), asyncio.to_thread(app.run, host="0.0.0.0", port=10000))
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    print("🤖 Caption Cleaner (Render) starting…")
+
+    import threading
+    def run_flask():
+        app.run(host="0.0.0.0", port=10000)
+
+    threading.Thread(target=run_flask).start()
+    bot.run()
+
